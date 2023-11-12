@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [Serializefield] protected float health;
+    [SerializeField] protected float health;
+    [SerializeField] protected Rigidbody2D rb;
     void Start()
     {
         
