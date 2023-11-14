@@ -50,6 +50,7 @@ public class PurpleEnemy : Enemy
 
     public override void DeathSequence()
     {
+        base.DeathSequence();
         Instantiate(explosionPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
     }

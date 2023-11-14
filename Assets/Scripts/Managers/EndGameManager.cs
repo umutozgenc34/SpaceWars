@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EndGameManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class EndGameManager : MonoBehaviour
     public bool gameOver;
 
     private PanelController panelController;
+    private TextMeshProUGUI scoreTextComponent;
+    private float score;
 
     private void Awake()
     {
@@ -25,6 +28,12 @@ public class EndGameManager : MonoBehaviour
     void Start()
     {
         
+    }
+
+    public void UpdateScore(int addScore)
+    {
+        score += addScore;
+        scoreTextComponent.text = "Score : " + score.ToString();
     }
     public void StartResolveSequence()
     {
@@ -65,6 +74,10 @@ public class EndGameManager : MonoBehaviour
         panelController = pC;
     }
 
+    public void RegisterScoreText(TextMeshProUGUI scoreTextComp)
+    {
+        scoreTextComponent = scoreTextComp;
+    }
     
 
     
