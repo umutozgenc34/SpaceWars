@@ -8,6 +8,7 @@ public class Meteor : Enemy
     [SerializeField] private float maxSpeed;
 
     [SerializeField] private float rotateSpeed;
+    [SerializeField] private ScriptableObjectExa powerUpSpawner;
 
     private float speed;
     // Start is called before the first frame update
@@ -32,6 +33,8 @@ public class Meteor : Enemy
     {
         base.DeathSequence();
         Instantiate(explosionPrefab, transform.position, transform.rotation);
+        if (powerUpSpawner != null)
+            powerUpSpawner.SpawnPowerUp(transform.position);
         Destroy(gameObject);
     }
 
