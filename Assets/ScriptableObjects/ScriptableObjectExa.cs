@@ -10,7 +10,7 @@ public class ScriptableObjectExa : ScriptableObject
 
     public void SpawnPowerUp(Vector3 spawnPos)
     {
-        int randomChance = Random.RandomRange(0,100);
+        int randomChance = Random.Range(0, 100);
         if (randomChance >spawnThreshold)
         {
             int randomPowerUp = Random.Range(0, powerUp.Length);
