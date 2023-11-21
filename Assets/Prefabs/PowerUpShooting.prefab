@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7576f621451dcfc4aaed89018e424b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clipToPlay: {fileID: 8300000, guid: 21ca20f0b557845499fc92cda5aba756, type: 3}
 --- !u!50 &396820667502830117
 Rigidbody2D:
   serializedVersion: 4
