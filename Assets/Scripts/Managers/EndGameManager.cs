@@ -8,10 +8,13 @@ public class EndGameManager : MonoBehaviour
 {
     public static EndGameManager endManager;
     public bool gameOver;
+    public bool posibleWin;
 
     private PanelController panelController;
     private TextMeshProUGUI scoreTextComponent;
-    private int score;
+    public int score;
+    private PlayerStats player;
+    private RewardedAd rewardedAd;
 
     [HideInInspector]
     public string levelUnlock = "LevelUnlock";
@@ -53,18 +56,24 @@ public class EndGameManager : MonoBehaviour
 
     public void ResolveGame()
     {
-        if (gameOver==true)
-        {
-            LoseGame();
-        }
-        else
+        if (posibleWin==true && gameOver==false)
         {
             WinGame();
+            
+        }
+        else if(posibleWin==false && gameOver==true)
+        {
+            AdLoseGame();
+        }
+        else if (posibleWin == true && gameOver == true)
+        {
+            LoseGame();
         }
     }
 
     public void WinGame()
     {
+        player.canTakeDmg = false;
         ScoreSet();
         panelController.ActivateWin();
         int nextLevel = SceneManager.GetActiveScene().buildIndex + 1;
@@ -79,7 +88,20 @@ public class EndGameManager : MonoBehaviour
         ScoreSet();
         panelController.ActivateLose();
     }
-
+    public void AdLoseGame()
+    {
+        ScoreSet();
+        if (rewardedAd.adNumber > 0)
+        {
+            rewardedAd.adNumber -= 1;
+            panelController.ActivateAdLose();
+        }
+        else
+        {
+            panelController.ActivateLose();
+        }
+        
+    }
     private void ScoreSet()
     {
         PlayerPrefs.SetInt("Score " + SceneManager.GetActiveScene().name, score);
@@ -101,6 +123,15 @@ public class EndGameManager : MonoBehaviour
         scoreTextComponent = scoreTextComp;
     }
     
+    public void RegisterPlayerStats(PlayerStats statsPlayer)
+    {
+        player = statsPlayer;
+    }
+
+    public void RegisterRewardedAd(RewardedAd ad)
+    {
+        rewardedAd = ad;
+    }
 
     
 }
