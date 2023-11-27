@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    
+
     [SerializeField] private GameObject bullet;
     [SerializeField] private float shootingInterval;
 
@@ -38,7 +38,7 @@ public class PlayerShooting : MonoBehaviour
     void Update()
     {
         shootingInterval -= Time.deltaTime;
-        if (shootingInterval <=0)
+        if (shootingInterval <= 0)
         {
             Shoot();
             shootingInterval = intervalReset;
@@ -54,7 +54,7 @@ public class PlayerShooting : MonoBehaviour
         }
     }
 
-    public void DecraseUpgrade ()
+    public void DecraseUpgrade()
     {
         upgradeLevel -= 1;
         if (upgradeLevel < 0)
@@ -110,6 +110,6 @@ public class PlayerShooting : MonoBehaviour
 
 
         }
-        
+
     }
 }
