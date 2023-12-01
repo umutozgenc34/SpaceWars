@@ -3,7 +3,16 @@ guid: 75439e60f50b6d941a3f534a6cf8fa95
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bullet: {fileID: 8370300325114770034, guid: bbe2f98cdcf12df48bfd879a6055ded4, type: 3}
+  - shootPoint: {instanceID: 0}
+  - leftCanon: {instanceID: 0}
+  - rightCanon: {instanceID: 0}
+  - secondLeftCanon: {instanceID: 0}
+  - secondRightCanon: {instanceID: 0}
+  - leftRotationCanon: {instanceID: 0}
+  - rightRotationCanon: {instanceID: 0}
+  - source: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

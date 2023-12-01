@@ -60,8 +60,11 @@ public class EnemySpawner : MonoBehaviour
     private void OnDisable()
     {
         if (winCon.canSpawnBoss == false)
+        {
             return;
 
+        }
+          
         if (bossPrefab != null)
         {
             Vector2 spawnPos = cam.ViewportToWorldPoint(new Vector2(0.5f, 1.2f));

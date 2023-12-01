@@ -2055,7 +2055,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1706582666650841418, guid: 6f5c1d6d61b435f4c9740c2cb188951f, type: 3}
       propertyPath: spawnTime
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1706582666650841419, guid: 6f5c1d6d61b435f4c9740c2cb188951f, type: 3}
       propertyPath: m_Name
@@ -2214,16 +2214,8 @@ PrefabInstance:
       objectReference: {fileID: 2035600821}
     - target: {fileID: 1200393768059332942, guid: e1771a9e942b94a4d9cf7f34d3e1babb, type: 3}
       propertyPath: enemySpawnTime
-      value: 1
+      value: 0.4
       objectReference: {fileID: 0}
-    - target: {fileID: 1200393768059332942, guid: e1771a9e942b94a4d9cf7f34d3e1babb, type: 3}
-      propertyPath: enemy.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1200393768059332942, guid: e1771a9e942b94a4d9cf7f34d3e1babb, type: 3}
-      propertyPath: enemy.Array.data[0]
-      value: 
-      objectReference: {fileID: 6004632738036956614, guid: 46b23dbe93eeb7c49bcca4b1b29115d3, type: 3}
     - target: {fileID: 1200393768059332943, guid: e1771a9e942b94a4d9cf7f34d3e1babb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2278,8 +2270,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5733237451399433284, guid: 5d991015c2a31cd439b4f4af72dd1ec7, type: 3}
+      propertyPath: m_Mass
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733237451399433284, guid: 5d991015c2a31cd439b4f4af72dd1ec7, type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733237451399433285, guid: 5d991015c2a31cd439b4f4af72dd1ec7, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 8370300325114770034, guid: bbe2f98cdcf12df48bfd879a6055ded4, type: 3}
+    - target: {fileID: 5733237451399433285, guid: 5d991015c2a31cd439b4f4af72dd1ec7, type: 3}
+      propertyPath: shootingInterval
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733237451399433286, guid: 5d991015c2a31cd439b4f4af72dd1ec7, type: 3}
+      propertyPath: maxHealth
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5733237451399433286, guid: 5d991015c2a31cd439b4f4af72dd1ec7, type: 3}
       propertyPath: healthFill
@@ -2369,7 +2377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6288510744928348481, guid: a9ae23f746bb8c0418c2c02a0618e243, type: 3}
       propertyPath: possibleWinTime
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6288510744928348481, guid: a9ae23f746bb8c0418c2c02a0618e243, type: 3}
       propertyPath: spawner.Array.size
